@@ -1,0 +1,31 @@
+name: Compari feed Pepiniera
+on:
+  schedule:
+    - cron: "0 12 * * *"   # 12:00 UTC = 15:00 ora României (Compari descarcă după 17:00)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: compari-feed
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Construiește feed-ul din pepinieraromaniei.ro/products.json
+        run: python3 build_feed.py --fetch
+      - name: Verificare (nu publica un feed gol sau stricat)
+        run: |
+          rows=$(python3 -c "import csv;print(sum(1 for _ in csv.DictReader(open('compari_pepiniera.csv',encoding='utf-8'),delimiter=';')))")
+          echo "Rânduri: $rows"
+          test "$rows" -ge 400
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > ultima_actualizare.txt
+      - name: Salvează (commit) dacă s-a schimbat
+        run: |
+          git config user.name "compari-feed-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add compari_pepiniera.csv compari_pepiniera.xml excluse.csv ultima_actualizare.txt
+          git commit -m "Feed Compari $(date -u +%F)" || echo "Nicio schimbare"
+          git push
