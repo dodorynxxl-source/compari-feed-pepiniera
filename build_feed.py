@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Compari.ro feed for Pepiniera României, built from the public /products.json.
 Usage: python3 build_feed.py [--fetch]   (--fetch = re-download products.json pages into raw/)"""
-import json, re, html, csv, sys, os, glob, time, urllib.request, urllib.parse
+import json, re, html, csv, sys, os, glob, time, urllib.request, urllib.parse, urllib.error
 from xml.sax.saxutils import escape
 
 BASE = "https://pepinieraromaniei.ro"
@@ -14,16 +14,27 @@ MANUFACTURER = "Pepiniera României"
 FREE_SHIP_FROM = 299.0
 SHIP_COST = "24.90"
 
+def get_json(url, tries=8):
+    """Shopify returns 429 to busy cloud IPs; retry with growing pauses."""
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; CompariFeedPepiniera/1.0)", "Accept": "application/json"})
+            return json.load(urllib.request.urlopen(req, timeout=60))
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 500, 502, 503, 504) or i == tries - 1: raise
+            wait = int(e.headers.get("Retry-After") or 0) or min(15 * (2 ** i), 240)
+            print(f"HTTP {e.code} la {url}, reîncerc peste {wait}s", flush=True)
+            time.sleep(wait)
+
 def fetch():
     os.makedirs(RAW, exist_ok=True)
     for f in glob.glob(os.path.join(RAW, "p*.json")): os.remove(f)
     page = 1
     while True:
-        req = urllib.request.Request(f"{BASE}/products.json?limit=250&page={page}", headers={"User-Agent": "Mozilla/5.0"})
-        data = json.load(urllib.request.urlopen(req, timeout=60))
+        data = get_json(f"{BASE}/products.json?limit=250&page={page}")
         if not data["products"]: break
         json.dump(data, open(os.path.join(RAW, f"p{page}.json"), "w"))
-        page += 1; time.sleep(1)
+        page += 1; time.sleep(5)
 
 def load():
     P = []
