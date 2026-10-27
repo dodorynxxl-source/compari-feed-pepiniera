@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Trandafir rosu",
+    "handle": "trandafir-rosu",
+    "product_type": "Trandafir",
+    "tags": [],
+    "body_html": "<p>Trandafir in stoc, 7.90 lei.</p>",
+    "variants": [
+      {"id": 101, "title": "Default Title", "price": "7.90", "sku": "TR-790", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/trandafir.jpg"}]
+  },
+  {
+    "id": 2,
+    "title": "Trandafir la 99",
+    "handle": "trandafir-99",
+    "product_type": "Trandafir",
+    "tags": [],
+    "body_html": "<p>Exact 99 lei.</p>",
+    "variants": [
+      {"id": 102, "title": "Default Title", "price": "99.00", "sku": "TR-99", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/t99.jpg"}]
+  },
+  {
+    "id": 3,
+    "title": "Trandafir sub prag transport",
+    "handle": "trandafir-298",
+    "product_type": "Trandafir",
+    "tags": [],
+    "body_html": "<p>298.99 lei.</p>",
+    "variants": [
+      {"id": 103, "title": "Default Title", "price": "298.99", "sku": "TR-298", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/t298.jpg"}]
+  },
+  {
+    "id": 4,
+    "title": "Trandafir prag transport",
+    "handle": "trandafir-299",
+    "product_type": "Trandafir",
+    "tags": [],
+    "body_html": "<p>299.00 lei.</p>",
+    "variants": [
+      {"id": 104, "title": "Default Title", "price": "299.00", "sku": "TR-299", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/t299.jpg"}]
+  },
+  {
+    "id": 5,
+    "title": "Trandafir peste prag",
+    "handle": "trandafir-309",
+    "product_type": "Trandafir",
+    "tags": [],
+    "body_html": "<p>309.90 lei.</p>",
+    "variants": [
+      {"id": 105, "title": "Default Title", "price": "309.90", "sku": "TR-309", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/t309.jpg"}]
+  },
+  {
+    "id": 6,
+    "title": "Trandafir epuizat",
+    "handle": "trandafir-epuizat",
+    "product_type": "Trandafir",
+    "tags": [],
+    "body_html": "<p>Fara stoc.</p>",
+    "variants": [
+      {"id": 106, "title": "Default Title", "price": "36.90", "sku": "TR-OFF", "available": false, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/toff.jpg"}]
+  },
+  {
+    "id": 7,
+    "title": "Mar Golden",
+    "handle": "mar-golden",
+    "product_type": "Mar",
+    "tags": [],
+    "body_html": "<p>Pom fructifer.</p>",
+    "variants": [
+      {"id": 107, "title": "Default Title", "price": "36.90", "sku": "MAR-1", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/mar.jpg"}]
+  },
+  {
+    "id": 8,
+    "title": "Seminte de rosii",
+    "handle": "seminte-rosii",
+    "product_type": "Seminte Rosii",
+    "tags": ["Pomi Fructiferi"],
+    "body_html": "<p>Seminte.</p>",
+    "variants": [
+      {"id": 108, "title": "Default Title", "price": "12.00", "sku": "SEM-1", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/sem.jpg"}]
+  },
+  {
+    "id": 9,
+    "title": "Arbust rar",
+    "handle": "arbust-rar",
+    "product_type": "Arbust",
+    "tags": ["Pomi Fructiferi"],
+    "body_html": "<p>Tag de pom fructifer.</p>",
+    "variants": [
+      {"id": 109, "title": "Default Title", "price": "40.00", "sku": "ARB-1", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/arb.jpg"}]
+  },
+  {
+    "id": 10,
+    "title": "Bulbi de lalele",
+    "handle": "bulbi-lalele",
+    "product_type": "Bulbi",
+    "tags": [],
+    "body_html": "<p>Exclus.</p>",
+    "variants": [
+      {"id": 110, "title": "Default Title", "price": "10.00", "sku": "BULB-1", "available": true, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/bulb.jpg"}]
+  }
+]
