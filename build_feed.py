@@ -14,6 +14,9 @@ CAT_FRUIT = "Casa si gradina > Grădină > Pomi fructiferi"
 MANUFACTURER = "Pepiniera României"
 FREE_SHIP_FROM = 299.0
 SHIP_COST = "24.90"
+# feed-requirements.html: Free/gratuit/gratis/„fara cost” sunt corecte; „0” și „0 RON” sunt incorecte.
+# Exemplul XML al grupului folosește exact <DeliveryCost>FREE</DeliveryCost>.
+FREE_DELIVERY = "FREE"
 
 def get_json(url, tries=8):
     """Shopify returns 429 to busy cloud IPs; retry with growing pauses."""
@@ -157,7 +160,7 @@ def build():
                 "ProductNumber": v.get("sku") or "",
                 "Description": clean_desc(p.get("body_html")),
                 "ImageUrl": img.split("?")[0] if img else "",
-                "DeliveryCost": "FREE" if price >= FREE_SHIP_FROM else SHIP_COST,
+                "DeliveryCost": FREE_DELIVERY if price >= FREE_SHIP_FROM else SHIP_COST,
                 "_title": p["title"], "_type": p["product_type"],
             })
     return P, rows, excl
