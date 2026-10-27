@@ -14,13 +14,30 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Teste de regresie (opresc publicarea)
+        run: |
+          python3 -m pip install --disable-pip-version-check pytest
+          python3 -m pytest tests/test_feed.py -q
+        env:
+          PIP_BREAK_SYSTEM_PACKAGES: "1"
+      - name: Numără feed-ul deja publicat
+        run: |
+          cp compari_pepiniera.csv /tmp/compari_prev.csv
+          python3 -c "import csv; print(sum(1 for _ in csv.DictReader(open('compari_pepiniera.csv',encoding='utf-8'),delimiter=';')))" > /tmp/compari_rows_before.txt
       - name: Construiește feed-ul din pepinieraromaniei.ro/products.json
         run: python3 build_feed.py --fetch
+      - name: Poartă pe feed-ul generat (înainte de commit)
+        run: python3 build_feed.py --check /tmp/compari_prev.csv
       - name: Verificare (nu publica un feed gol sau stricat)
         run: |
           rows=$(python3 -c "import csv;print(sum(1 for _ in csv.DictReader(open('compari_pepiniera.csv',encoding='utf-8'),delimiter=';')))")
-          echo "Rânduri: $rows"
+          prev=$(cat /tmp/compari_rows_before.txt)
+          echo "Rânduri: $rows (anterior: $prev)"
           test "$rows" -ge 400
+          if [ "$prev" -gt 0 ] && [ $(( rows * 100 )) -lt $(( prev * 70 )) ]; then
+            echo "Feed prea mic: $rows este cu peste 30% sub $prev"
+            exit 1
+          fi
           date -u +"%Y-%m-%dT%H:%M:%SZ" > ultima_actualizare.txt
       - name: Salvează (commit) dacă s-a schimbat
         run: |

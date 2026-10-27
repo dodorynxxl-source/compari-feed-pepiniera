@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Compari.ro feed for Pepiniera României, built from the public /products.json.
-Usage: python3 build_feed.py [--fetch]   (--fetch = re-download products.json pages into raw/)"""
+Usage: python3 build_feed.py [--fetch] [--check cale/feed-anterior.csv]
+       (--fetch = re-download products.json pages into raw/)
+       (--check = poartă: prag 400, scădere peste 30%, id-uri dispărute)"""
 import json, re, html, csv, sys, os, glob, time, urllib.request, urllib.parse, urllib.error
+from collections import Counter
 from xml.sax.saxutils import escape
 
 BASE = "https://pepinieraromaniei.ro"
@@ -9,10 +12,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, "raw")
 CAT_PLANT = "Casa si gradina > Grădină > Planta de gradina decorativa"
 CAT_SEED = "Casa si gradina > Grădină > Seminte, bulbi"
+CAT_BULB = "Casa si gradina > Grădină > Seminte, bulbi > Bulbi de flori"
 CAT_GRASS = "Casa si gradina > Grădină > Seminte de iarba"
+CAT_FRUIT = "Casa si gradina > Grădină > Pomi fructiferi"
 MANUFACTURER = "Pepiniera României"
 FREE_SHIP_FROM = 299.0
 SHIP_COST = "24.90"
+# feed-requirements.html: Free/gratuit/gratis/„fara cost” sunt corecte; „0” și „0 RON” sunt incorecte.
+# Exemplul XML al grupului folosește exact <DeliveryCost>FREE</DeliveryCost>.
+FREE_DELIVERY = "FREE"
+MIN_FEED_ROWS = 400
+INVALID_DELIVERY = ("0", "0 RON")
 
 def get_json(url, tries=8):
     """Shopify returns 429 to busy cloud IPs; retry with growing pauses."""
@@ -44,12 +54,33 @@ def load():
 
 BULB_TYPE = re.compile(r"bulbi|^pachet (crini|lalele|narcise|gladiole|frezie|anemone|bujor)", re.I)
 BULB_TITLE = re.compile(r"\bbulb|lalel|bujor|narcis|\bcrini?\b|gladiol|frezi", re.I)
+# product_type fără diacritice: Mar, Par, Cireș, Vișin, plus arbuști fructiferi din același catalog
+FRUIT_TYPE = re.compile(
+    r"\b(mar|par|cires|visin|prun|cais|piersic|nectarin|gutui|nuc|alun|castan|dud|migdal|mosmon|mur|rodi[ue]|agris|aronia|catina|coacaz\w*|zmeur\w*|josta|kaki|smochin|kiwi|afin\w*|corn)\b"
+)
+
+def _fold(s):
+    return (s or "").lower().translate(str.maketrans("ăâîșşțţ", "aaisstt"))
+
+def _tags(p):
+    tags = p.get("tags") or []
+    if isinstance(tags, str):
+        tags = [t.strip() for t in tags.split(",") if t.strip()]
+    return tags
+
+def is_fruit(p):
+    for tag in _tags(p):
+        if "pomi fructiferi" in _fold(tag):
+            return True
+    return bool(FRUIT_TYPE.search(_fold(p.get("product_type") or "")))
+
+def is_bulb(p):
+    t, ty = p["title"], (p["product_type"] or "")
+    return bool(BULB_TYPE.search(ty) or BULB_TITLE.search(t))
 
 def classify(p):
     """Return (include: bool, reason_or_category)."""
     t, ty = p["title"], (p["product_type"] or "")
-    if BULB_TYPE.search(ty) or BULB_TITLE.search(t):
-        return False, "bulbi/bujori/lalele (zona Fitza)"
     if ty.lower().startswith("antidaunatori"):
         return False, "antidaunatori (nu sunt plante)"
     s = (t + " " + ty).lower()
@@ -57,6 +88,10 @@ def classify(p):
         return True, CAT_GRASS
     if re.search(r"semin|senimnte", s):
         return True, CAT_SEED
+    if is_bulb(p):
+        return True, CAT_BULB
+    if is_fruit(p):
+        return True, CAT_FRUIT
     return True, CAT_PLANT
 
 WORDS = {  # diacritice / greșeli frecvente în titluri
@@ -106,8 +141,8 @@ def clean_desc(body, n=600):
         s = s[:n].rsplit(" ", 1)[0].rstrip(",;:") + "…"
     return s
 
-def build():
-    P = load()
+def build(products=None):
+    P = load() if products is None else products
     rows, excl = [], []
     for p in P:
         avail = [v for v in p["variants"] if v["available"]]
@@ -135,12 +170,13 @@ def build():
                 "ProductNumber": v.get("sku") or "",
                 "Description": clean_desc(p.get("body_html")),
                 "ImageUrl": img.split("?")[0] if img else "",
-                "DeliveryCost": "FREE" if price >= FREE_SHIP_FROM else SHIP_COST,
+                "DeliveryTime": "2",
+                "DeliveryCost": FREE_DELIVERY if price >= FREE_SHIP_FROM else SHIP_COST,
                 "_title": p["title"], "_type": p["product_type"],
             })
     return P, rows, excl
 
-FIELDS = ["Identifier", "Manufacturer", "Name", "Category", "ProductUrl", "Price", "ProductNumber", "Description", "ImageUrl", "DeliveryCost"]
+FIELDS = ["Identifier", "Manufacturer", "Name", "Category", "ProductUrl", "Price", "ProductNumber", "Description", "ImageUrl", "DeliveryTime", "DeliveryCost"]
 
 def write(rows, excl, P):
     out = HERE
@@ -159,11 +195,115 @@ def write(rows, excl, P):
         w = csv.writer(f, delimiter=";"); w.writerow(["titlu_site", "Name_feed", "Category"])
         for r in rows: w.writerow([r["_title"], r["Name"], r["Category"]])
 
+def reconciliation_errors(products, rows, excl):
+    """Catalog = rânduri din feed + excluderi, fiecare produs o singură dată."""
+    errors = []
+    prod_ids = [p["id"] for p in products]
+    if len(prod_ids) != len(set(prod_ids)):
+        errors.append("catalog cu id-uri de produs duble")
+    var_to_prod = {str(v["id"]): p["id"] for p in products for v in p["variants"]}
+    feed_prods = []
+    for r in rows:
+        pid = var_to_prod.get(r["Identifier"])
+        if pid is None:
+            errors.append(f"rând fără produs în catalog: {r['Identifier']}")
+            continue
+        feed_prods.append(pid)
+    feed_set = set(feed_prods)
+    if len(feed_prods) != len(feed_set):
+        errors.append("același produs apare pe mai multe rânduri în feed")
+    reasons = Counter()
+    excl_ids = []
+    for p, why in excl:
+        excl_ids.append(p["id"])
+        if not why:
+            errors.append(f"excludere fără motiv: {p['id']}")
+        reasons[why] += 1
+    if len(excl_ids) != len(set(excl_ids)):
+        errors.append("produs exclus de două ori")
+    overlap = feed_set & set(excl_ids)
+    if overlap:
+        errors.append("numărate și în feed și la excluse: " + ", ".join(map(str, sorted(overlap, key=str))))
+    accounted = feed_set | set(excl_ids)
+    missing = set(prod_ids) - accounted
+    if missing:
+        errors.append("neluate în calcul: " + ", ".join(map(str, sorted(missing, key=str))))
+    extra = accounted - set(prod_ids)
+    if extra:
+        errors.append("în plus față de catalog: " + ", ".join(map(str, sorted(extra, key=str))))
+    if sum(reasons.values()) != len(excl):
+        errors.append("suma motivelor nu acoperă lista de excluse")
+    if len(products) != len(rows) + sum(reasons.values()):
+        errors.append(
+            f"reconciliere: catalog {len(products)} != rânduri {len(rows)} + excluse {sum(reasons.values())}"
+        )
+    return errors
+
+def publish_gate(prev_ids, new_ids, catalog_ids, excluded_reasons, prev_count=None, new_count=None):
+    """Oprește publicarea sub 400 de rânduri, la o scădere de peste 30%, sau dacă un id
+    din feed-ul anterior lipsește fără să fi ieșit din catalog și fără motiv de excludere.
+    Returnează lista de erori (goală = se poate publica)."""
+    prev_ids = set(map(str, prev_ids))
+    new_ids = set(map(str, new_ids))
+    catalog_ids = set(map(str, catalog_ids))
+    excluded_reasons = {str(k): v for k, v in (excluded_reasons or {}).items() if v}
+    if prev_count is None:
+        prev_count = len(prev_ids)
+    if new_count is None:
+        new_count = len(new_ids)
+    errors = []
+    if new_count < MIN_FEED_ROWS:
+        errors.append(f"sub pragul de {MIN_FEED_ROWS}: {new_count} rânduri")
+    if prev_count > 0 and new_count * 100 < prev_count * 70:
+        errors.append(f"scădere peste 30%: {new_count} față de {prev_count}")
+    disappeared = []
+    for i in sorted(prev_ids - new_ids):
+        if i not in catalog_ids:
+            continue
+        if excluded_reasons.get(i):
+            continue
+        disappeared.append(i)
+    if disappeared:
+        errors.append("id-uri dispărute fără motiv: " + ", ".join(disappeared))
+    return errors
+
+def excluded_variant_reasons(excl):
+    reasons = {}
+    for p, why in excl:
+        for v in p["variants"]:
+            reasons[str(v["id"])] = why
+    return reasons
+
+def check_publish(prev_csv_path):
+    P, rows, excl = build()
+    with open(prev_csv_path, encoding="utf-8") as f:
+        prev = list(csv.DictReader(f, delimiter=";"))
+    prev_ids = [r["Identifier"] for r in prev]
+    new_ids = [r["Identifier"] for r in rows]
+    catalog_ids = [str(v["id"]) for p in P for v in p["variants"]]
+    errors = reconciliation_errors(P, rows, excl)
+    errors += publish_gate(
+        prev_ids, new_ids, catalog_ids, excluded_variant_reasons(excl),
+        prev_count=len(prev), new_count=len(rows),
+    )
+    if errors:
+        print("Publicare oprită:", file=sys.stderr)
+        for e in errors:
+            print(e, file=sys.stderr)
+        return 1
+    print(f"poartă ok: {len(rows)} rânduri, anterior {len(prev)}, excluse {len(excl)}")
+    return 0
+
 if __name__ == "__main__":
+    if "--check" in sys.argv:
+        i = sys.argv.index("--check")
+        if i + 1 >= len(sys.argv):
+            print("Lipsește calea CSV anterioară", file=sys.stderr)
+            sys.exit(2)
+        sys.exit(check_publish(sys.argv[i + 1]))
     if "--fetch" in sys.argv: fetch()
     P, rows, excl = build()
     write(rows, excl, P)
-    from collections import Counter
     print("publicate pe Online Store:", len(P))
     print("incluse:", len(rows), dict(Counter(r["Category"] for r in rows)))
     print("excluse:", len(excl), dict(Counter(w for _, w in excl)))
