@@ -14,13 +14,21 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Numără feed-ul deja publicat
+        run: |
+          python3 -c "import csv; print(sum(1 for _ in csv.DictReader(open('compari_pepiniera.csv',encoding='utf-8'),delimiter=';')))" > /tmp/compari_rows_before.txt
       - name: Construiește feed-ul din pepinieraromaniei.ro/products.json
         run: python3 build_feed.py --fetch
       - name: Verificare (nu publica un feed gol sau stricat)
         run: |
           rows=$(python3 -c "import csv;print(sum(1 for _ in csv.DictReader(open('compari_pepiniera.csv',encoding='utf-8'),delimiter=';')))")
-          echo "Rânduri: $rows"
+          prev=$(cat /tmp/compari_rows_before.txt)
+          echo "Rânduri: $rows (anterior: $prev)"
           test "$rows" -ge 400
+          if [ "$prev" -gt 0 ] && [ $(( rows * 100 )) -lt $(( prev * 70 )) ]; then
+            echo "Feed prea mic: $rows este cu peste 30% sub $prev"
+            exit 1
+          fi
           date -u +"%Y-%m-%dT%H:%M:%SZ" > ultima_actualizare.txt
       - name: Salvează (commit) dacă s-a schimbat
         run: |
