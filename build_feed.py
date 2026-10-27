@@ -8,8 +8,9 @@ BASE = "https://pepinieraromaniei.ro"
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, "raw")
 CAT_PLANT = "Casa si gradina > Grădină > Planta de gradina decorativa"
-CAT_SEED = "Casa si gradina > Grădină > Seminte, bulbi"
+CAT_SEED = "Casa si gradina > Grădină > Seminte"
 CAT_GRASS = "Casa si gradina > Grădină > Seminte de iarba"
+CAT_FRUIT = "Casa si gradina > Grădină > Pomi fructiferi"
 MANUFACTURER = "Pepiniera României"
 FREE_SHIP_FROM = 299.0
 SHIP_COST = "24.90"
@@ -44,6 +45,25 @@ def load():
 
 BULB_TYPE = re.compile(r"bulbi|^pachet (crini|lalele|narcise|gladiole|frezie|anemone|bujor)", re.I)
 BULB_TITLE = re.compile(r"\bbulb|lalel|bujor|narcis|\bcrini?\b|gladiol|frezi", re.I)
+# product_type fără diacritice: Mar, Par, Cireș, Vișin, plus arbuști fructiferi din același catalog
+FRUIT_TYPE = re.compile(
+    r"\b(mar|par|cires|visin|prun|cais|piersic|nectarin|gutui|nuc|alun|castan|dud|migdal|mosmon|mur|rodi[ue]|agris|aronia|catina|coacaz\w*|zmeur\w*|josta|kaki|smochin|kiwi|afin\w*|corn)\b"
+)
+
+def _fold(s):
+    return (s or "").lower().translate(str.maketrans("ăâîșşțţ", "aaisstt"))
+
+def _tags(p):
+    tags = p.get("tags") or []
+    if isinstance(tags, str):
+        tags = [t.strip() for t in tags.split(",") if t.strip()]
+    return tags
+
+def is_fruit(p):
+    for tag in _tags(p):
+        if "pomi fructiferi" in _fold(tag):
+            return True
+    return bool(FRUIT_TYPE.search(_fold(p.get("product_type") or "")))
 
 def classify(p):
     """Return (include: bool, reason_or_category)."""
@@ -57,6 +77,8 @@ def classify(p):
         return True, CAT_GRASS
     if re.search(r"semin|senimnte", s):
         return True, CAT_SEED
+    if is_fruit(p):
+        return True, CAT_FRUIT
     return True, CAT_PLANT
 
 WORDS = {  # diacritice / greșeli frecvente în titluri
