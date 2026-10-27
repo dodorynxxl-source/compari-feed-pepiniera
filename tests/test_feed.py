@@ -137,5 +137,26 @@ def test_categorii_pomi_si_seminte():
     assert rows["107"]["Category"] == bf.CAT_FRUIT
     assert rows["109"]["Category"] == bf.CAT_FRUIT
     assert rows["108"]["Category"] == bf.CAT_SEED
-    assert "bulbi" not in rows["108"]["Category"].lower()
+    assert rows["108"]["Category"].endswith("Seminte, bulbi")
     assert rows["101"]["Category"] == bf.CAT_PLANT
+
+
+def test_bulb_in_stoc_este_in_feed():
+    _, rows, excl = built()
+    row = by_id(rows)["110"]
+    assert row["Category"] == bf.CAT_BULB
+    assert row["Category"].startswith(bf.CAT_SEED)
+    assert "110" not in {str(v["id"]) for p, _ in excl for v in p["variants"]}
+
+
+def test_bulb_fara_stoc_exclus():
+    _, rows, excl = built()
+    assert "111" not in by_id(rows)
+    reasons = {str(v["id"]): why for p, why in excl for v in p["variants"]}
+    assert reasons["111"] == "fără stoc"
+
+
+def test_delivery_time_2_pe_fiecare_rand():
+    _, rows, _ = built()
+    assert rows
+    assert {r["DeliveryTime"] for r in rows} == {"2"}

@@ -11,7 +11,8 @@ BASE = "https://pepinieraromaniei.ro"
 HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, "raw")
 CAT_PLANT = "Casa si gradina > Grădină > Planta de gradina decorativa"
-CAT_SEED = "Casa si gradina > Grădină > Seminte"
+CAT_SEED = "Casa si gradina > Grădină > Seminte, bulbi"
+CAT_BULB = "Casa si gradina > Grădină > Seminte, bulbi > Bulbi de flori"
 CAT_GRASS = "Casa si gradina > Grădină > Seminte de iarba"
 CAT_FRUIT = "Casa si gradina > Grădină > Pomi fructiferi"
 MANUFACTURER = "Pepiniera României"
@@ -73,11 +74,13 @@ def is_fruit(p):
             return True
     return bool(FRUIT_TYPE.search(_fold(p.get("product_type") or "")))
 
+def is_bulb(p):
+    t, ty = p["title"], (p["product_type"] or "")
+    return bool(BULB_TYPE.search(ty) or BULB_TITLE.search(t))
+
 def classify(p):
     """Return (include: bool, reason_or_category)."""
     t, ty = p["title"], (p["product_type"] or "")
-    if BULB_TYPE.search(ty) or BULB_TITLE.search(t):
-        return False, "bulbi/bujori/lalele (zona Fitza)"
     if ty.lower().startswith("antidaunatori"):
         return False, "antidaunatori (nu sunt plante)"
     s = (t + " " + ty).lower()
@@ -85,6 +88,8 @@ def classify(p):
         return True, CAT_GRASS
     if re.search(r"semin|senimnte", s):
         return True, CAT_SEED
+    if is_bulb(p):
+        return True, CAT_BULB
     if is_fruit(p):
         return True, CAT_FRUIT
     return True, CAT_PLANT
@@ -165,12 +170,13 @@ def build(products=None):
                 "ProductNumber": v.get("sku") or "",
                 "Description": clean_desc(p.get("body_html")),
                 "ImageUrl": img.split("?")[0] if img else "",
+                "DeliveryTime": "2",
                 "DeliveryCost": FREE_DELIVERY if price >= FREE_SHIP_FROM else SHIP_COST,
                 "_title": p["title"], "_type": p["product_type"],
             })
     return P, rows, excl
 
-FIELDS = ["Identifier", "Manufacturer", "Name", "Category", "ProductUrl", "Price", "ProductNumber", "Description", "ImageUrl", "DeliveryCost"]
+FIELDS = ["Identifier", "Manufacturer", "Name", "Category", "ProductUrl", "Price", "ProductNumber", "Description", "ImageUrl", "DeliveryTime", "DeliveryCost"]
 
 def write(rows, excl, P):
     out = HERE

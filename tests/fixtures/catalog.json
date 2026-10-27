@@ -118,5 +118,17 @@
       {"id": 110, "title": "Default Title", "price": "10.00", "sku": "BULB-1", "available": true, "featured_image": null}
     ],
     "images": [{"src": "https://cdn.example/bulb.jpg"}]
+  },
+  {
+    "id": 11,
+    "title": "Bulbi de narcise epuizate",
+    "handle": "bulbi-narcise-epuizate",
+    "product_type": "Bulbi de Narcise",
+    "tags": [],
+    "body_html": "<p>Fara stoc.</p>",
+    "variants": [
+      {"id": 111, "title": "Default Title", "price": "12.90", "sku": "BULB-OFF", "available": false, "featured_image": null}
+    ],
+    "images": [{"src": "https://cdn.example/bulb-off.jpg"}]
   }
 ]
