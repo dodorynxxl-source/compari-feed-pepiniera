@@ -1,6 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Products>
   <Product>
+    <Identifier>53059277553928</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur „Black Satin” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-black-satin-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>001822-PEP</ProductNumber>
+    <Description>Descriere: „Black Satin” este un soi de mur cu fructe mari, negre și lucioase, care aduc o aromă dulce și ușor acidulată. Acest soi este ideal pentru grădinile de familie, deoarece produce o recoltă abundentă de fructe ce se potrivesc perfect pentru gemuri, deserturi sau consumul proaspăt. Frunzele sale sunt viguroase, iar planta se înalță pe tulpini agățate, care pot atinge o înălțime de până la 2,4 metri. Floarea alb-crem adaugă un plus de frumusețe în grădină, iar fructele sale delicioase sunt o adevărată comoară a verii. Zone de plantare: „Black Satin” se pretează în special zonelor cu…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Mur-Black-Satin-Anul-2-1-Bucata-7.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277488392</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur „Navaho” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-navaho-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>001821-PEP</ProductNumber>
+    <Description>Descriere: „Navaho” este un soi semi-erect, cu fructe mari, dulci și ușor acidulate, care se coc din iulie până în septembrie. Acest soi este apreciat pentru structura sa compactă, fără spini, care face recolta mult mai ușoară și mai plăcută. Fructele sale de culoare neagră lucioasă sunt excelente pentru consumul proaspăt, dar și pentru prepararea de gemuri și dulceață. „Navaho” se încadrează perfect într-o grădină mică sau într-o livadă urbană datorită dimensiunii sale moderate și ușurinței de întreținere. Zone de plantare: Ideal pentru regiunile cu climat temperat și nu foarte reci…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Mur-Navaho-Anul-2-1-Bucata-5.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277455624</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur „Triple Crown” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-triple-crown-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>001820-PEP</ProductNumber>
+    <Description>Descriere: „Triple Crown” este un soi de mur cu fructe mari și suculente, de un negru intens, cu o aromă dulce, ce combină echilibrat dulceața și aciditatea. Acest soi hibrid este renumit pentru productivitatea sa mare și pentru perioada lungă de recoltare, care începe în august și se poate prelungi până în septembrie. „Triple Crown” se remarcă prin rezistența sa la boli și prin fructele de calitate superioară, perfecte pentru grădinile de familie, dar și pentru livezile comerciale. Este o alegere excelentă pentru cei care doresc o recoltă consistentă și continuă. Zone de plantare: Ideal…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Mur-Triple-Crown-Anul-2-1-Bucata-0.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277422856</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur „Boysenberry” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-boysenberry-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>001819-PEP</ProductNumber>
+    <Description>Descriere: „Boysenberry” este un hibrid vibrant care îmbină arome de mur, zmeură și coacăz într-un fruct mare, suculent, cu o nuanță roșu-mov fascinantă. Este un soi prolific, care oferă o recoltă generoasă de fructe ce se coc pe parcursul verii, aducând un gust dulce și rafinat în fiecare mușcătură. Cu o înălțime moderată, de aproximativ 2 metri, „Boysenberry” este ușor de cultivat și de întreținut, fiind perfect pentru grădinile mici sau livezile de dimensiuni medii. Florile sale delicate, de culoare alb-roz, adaugă un farmec aparte în grădina ta. Zone de plantare: Acest soi preferă un…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Mur-Boysenberry-Anul-2-1-Bucata-2.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277357320</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „Glen Coe” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-glen-coe-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME001818-PEP</ProductNumber>
+    <Description>Zmeur Glen Coe este o varietate remontantă, apreciată pentru fructele mari, de un roșu-violet intens. Are o aromă dulce-acrișoară și o textură fermă. Produce fructe vara și din nou toamna, oferind o recoltă prelungită și generoasă sezon după sezon. Soiul este potrivit atât pentru grădinarii amatori, cât și pentru producătorii comerciali. Grădinarii și comercianții aleg soiul Glen Coe pentru productivitatea sa ridicată și calitatea excelentă a fructelor. Se remarcă prin rezistența naturală la bolile zmeurei, ceea ce reduce nevoia de tratamente și simplifică îngrijirea plantei. Aceasta îl face…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-Glen-Coe-Anul-2-1-Bucata-2.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277291784</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „Sugana” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-sugana-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME001817-PEP</ProductNumber>
+    <Description>Zmeur „Sugana” – Gust delicios și productivitate ridicată la un preț accesibil Alege zmeurul „Sugana” pentru o recoltă bogată de fructe aromate, la un preț avantajos. Costul redus nu compromite calitatea acestui soi remontant, cunoscut pentru rezistența sa și fructele mari, de un roșu intens, cu un gust dulce și plăcut. Rezistență sporită la boli și dăunători Adaptabilitate excelentă la diverse condiții de sol și climă Productivitate ridicată, cu două recolte pe an: vara (iunie – iulie) și toamna (august – septembrie, până la primele brume) Economisești comparativ cu alte soiuri premium…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-Sugana-Anul-2-1-Bucata-5.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277259016</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „Citria” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-citria-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME001816-PEP</ProductNumber>
+    <Description>Zmeur Citria este o varietate remarcabilă de zmeur galben-auriu, apreciată pentru gustul dulce și intens, asemănător citricelor. Este un soi remontant, care rodește vara și din nou toamna, iar productivitatea ridicată și adaptabilitatea sa îl fac o alegere excelentă pentru grădina ta. De ce să alegi zmeur Citria pentru grădina ta? Fructele galben-aurii au un gust deosebit și o aromă intensă. Soiul se remarcă prin rezistența naturală la bolile zmeurei, ceea ce reduce semnificativ efortul de îngrijire. Astfel, obții recolte bogate fără tratamente frecvente. Această rezistență naturală este unul…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-Citria-Anul-2-1-Bucata-2.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277226248</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „Cayuga” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-cayuga-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME001815-PEP</ProductNumber>
+    <Description>Despre zmeurul Cayuga Cultivarea zmeurului Cayuga în grădina ta Zmeurul Cayuga este un soi modern remontant, apreciat pentru fructele sale mari, dulci și suculente, de un roșu intens. Boabele sunt ferme și aromate, cu o greutate de 4-5 g per rod. Acest zmeur Cayuga rodește vara, din iunie – iulie, și din nou toamna, în august – septembrie, până la primele brume. La maturitate, poți obține 2-4 kg de fructe pe plantă, anual. Cayuga este un soi de zmeur cu rezistență naturală la bolile zmeurei. De aceea, nu ai nevoie de tratamente complicate pentru a menține plantele sănătoase. Fructificarea…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-Cayuga-Anul-2-1-Bucata-0.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059277193480</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „Heritage” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-heritage-anul-2-1-bucata</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME001814-PEP</ProductNumber>
+    <Description>Zmeurul Heritage este un soi de zmeur remontant extrem de popular, datorită fructelor sale dulci și aromate, și a rezistenței excelente la boli și condiții de climă variate. Este un soi productiv, care produce fructe de două ori pe an, vara și toamna, ceea ce îl face o alegere deosebită pentru grădinile de familie și livezile comerciale. Zmeurul Heritage preferă soluri fertile, ușor acide (pH între 5,5 și 6,5), bine drenate, și o expunere la soare. Este adaptabil și poate fi cultivat cu succes în zonele temperate din România, inclusiv în regiunile mai reci, datorită rezistenței sale la frig.…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-Heritage-Anul-2-1-Bucata-5.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059143041288</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur „Thornfree” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-thornfree-puiet-arbust-fructifer-1-bucata-pachet</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>MUR00853-PEP</ProductNumber>
+    <Description>Mur „Thornfree” – fructele delicioase, fără spini, la un preț avantajos Murul „Thornfree” reprezintă alegerea perfectă pentru orice grădină, oferind o recoltă bogată și gust autentic, la un preț accesibil. Costurile reduse îl fac ideal chiar și pentru cei care doresc să investească inteligent, fără să compromită calitatea. Această plantă este apreciată pentru ușurința în îngrijire, oferind rezultate excelente fără eforturi mari. Cu toate că prețul este atractiv, calitatea murului „Thornfree” rămâne la cote înalte, asigurându-ți fructe sănătoase, cu un gust natural intens și o productivitate…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Mur-Thornfree-Anul-2-1-Bucata-0.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059142910216</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „The Latham” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-the-latham-puiet-arbust-fructifer-1-bucata-pachet</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME00852-PEP</ProductNumber>
+    <Description>Zmeur „The Latham” – gust, calitate și economie Zmeurul „The Latham” este un soi remontant, care rodește vara și din nou toamna, și oferă o combinație excelentă între valoare și accesibilitate. Chiar dacă prețul este avantajos, calitatea acestei plante rămâne la cele mai înalte standarde, fiind o investiție profitabilă pentru orice grădină sau plantație. Productivitate ridicată și fructe suculente, deosebit de gustoase Ușor de întreținut, necesită expunere la soare și sol bine drenat Adaptabilitate excelentă la diverse condiții climatice și soluri variate Economisești comparativ cu alte…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-The-Latham-Anul-2-1-Bucata-4.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53059134980360</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „Yellow Giant” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-yellow-giant-soi-remontant-1-bucata-pachet</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME00785-PEP</ProductNumber>
+    <Description>Zmeur „Yellow Giant” Zmeurul „Yellow Giant” oferă o valoare excepțională pentru prețul său, fiind alegerea perfectă pentru grădinarii care caută o recoltă bogată și gustoasă fără costuri ridicate. Este extrem de rentabil, asigurând fructe mari și suculente vara și din nou toamna, chiar și la un preț accesibil. Calitatea sa nu este compromisă de prețul avantajos — acest soi remontant este cunoscut pentru productivitatea sa și rezistența la boli. Două recolte pe an: vara și din nou toamna Fructe mari, dulci și de un galben atractiv Rezistență sporită la boli și întreținere minimă Prețuri…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-Yellow-Giant-Soi-Remontant-Anul-2-1-Bucata-9.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53058971173128</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur „Polka” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-polka</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>ZME00222-PEP</ProductNumber>
+    <Description>Zmeur „Polka” – Gust și productivitate la un preț accesibil Zmeurul Polka reprezintă o alegere excelentă pentru orice grădinar pasionat care dorește un arbust fructifer de calitate superioară, cu un cost avantajos. Acest zmeur Polka este un soi remontant care oferă fructe mari, aromate și două recolte pe an, vara și toamna, fiind în același timp accesibil ca preț. În ciuda costului redus, calitatea și rezistența sa la boli îl fac o investiție valoroasă pentru grădina ta. Fructe mari și aromate Rezistență ridicată la boli Două recolte pe an: vara și din nou toamna Economie semnificativă…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Zmeur-Polka-Anul-2-1-Bucata-3.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>53058971107592</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur „Navaho Summerlong” anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-navaho-summerlong</ProductUrl>
+    <Price>19.00</Price>
+    <ProductNumber>MUR00220-PEP</ProductNumber>
+    <Description>Mur „Navaho Summerlong”, 1 bucată – gustul verii în grădina ta Murul „Navaho Summerlong” este alegerea ideală pentru pasionații de grădinărit care doresc o recoltă bogată și savuroasă întreaga vară. Cu un preț accesibil, această plantă de calitate superioară oferă un raport excelent calitate-cost, fiind perfectă pentru orice tip de grădină. Chiar dacă costul este redus, calitatea fructelor și durabilitatea plantei sunt de top, făcând din acest mur o investiție inteligentă pentru fiecare sezon. Beneficiază de o perioadă extinsă de fructificare, de la mijlocul lui iulie până la sfârșitul lui…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Mur-Navaho-Summerlong-Anul-2-1-Bucata-2.jpg</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716591880</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur Pom Loch Tay anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-pom-loch-tay-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>MUR002879-PEP</ProductNumber>
+    <Description>Mur Pom Loch Tay, anul 3 – mure proaspete din primul an Mur Pom Loch Tay este un mur pom compact și fără spini, ideal pentru grădini mici și curți, care îți aduce primele mure ale verii. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt medii, ferme, de un negru cu reflexe violacee. Gustul este dulce și aromat. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Este un soi productiv, cu o recoltă concentrată în circa patru săptămâni, și unul dintre cele mai timpurii soiuri de mur. De ce să…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/mur-pom-loch-tay-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716559112</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur Pom Ouachita anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-pom-ouachita-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>MUR002878-PEP</ProductNumber>
+    <Description>Mur Pom Ouachita, anul 3 – mure proaspete din primul an Mur Pom Ouachita este un mur pom fără spini, cu tulpini drepte și rigide, care se țin singure, și cu fructe foarte dulci. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt medii spre mari, negre, foarte lucioase și ferme. Gustul este dulce, cu o aciditate blândă și o aromă distinctă de mure. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Are o producție bună și constantă de la an la an: o plantă matură, bine îngrijită, dă până la…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/mur-pom-ouachita-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716526344</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur Pom Natchez anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-pom-natchez-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>MUR002877-PEP</ProductNumber>
+    <Description>Mur Pom Natchez, anul 3 – mure proaspete din primul an Mur Pom Natchez este un mur pom fără spini, cu fructe foarte mari, care atrag privirea, și o recoltă timpurie. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt foarte mari, alungite, negre și lucioase. Gustul este dulce, cu o aciditate ușoară și o aromă bună de mure. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Este un soi foarte productiv și se coace printre primele: o plantă matură, bine îngrijită, dă până la aproximativ 4 kg de…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/mur-pom-natchez-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716493576</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur Pom Loch Ness anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-pom-loch-ness-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>MUR002876-PEP</ProductNumber>
+    <Description>Mur Pom Loch Ness, anul 3 – mure proaspete din primul an Mur Pom Loch Ness este un mur pom compact și fără spini, cu tulpini viguroase, care aduce în grădina ta gustul murelor de pădure. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt mari, conice, negre, ușor lucioase și ferme. Gustul este acrișor-plăcut, cu aroma intensă a murelor sălbatice de pădure. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Rodește abundent pe o perioadă lungă: o plantă matură, bine îngrijită, dă până la…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/mur-pom-loch-ness-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716460808</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Mur Pom Chester Thornless anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/mur-pom-chester-thornless-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>MUR002875-PEP</ProductNumber>
+    <Description>Mur Pom Chester Thornless, anul 3 – mure proaspete din primul an Mur Pom Chester Thornless este un mur pom viguros și fără spini, cu o coroană bogată din care atârnă ciorchini plini de fructe. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt mari, rotunjite, negre-lucioase și ferme. Gustul este dulce-acrișor, cu aroma clasică de mure; fructele sunt cele mai dulci când devin negru mat, complet coapte. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Este unul dintre cele mai productive…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/mur-pom-chester-thornless-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716428040</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur Pom Târziu de Toamnă anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-pom-tarziu-de-toamna-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>ZME002874-PEP</ProductNumber>
+    <Description>Zmeur Pom Târziu de Toamnă, anul 3 – zmeură proaspătă din primul an Zmeur Pom Târziu de Toamnă este un zmeur viguros, cu tulpini rigide, care îți aduce zmeură proaspătă când celelalte soiuri au terminat. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt medii spre mari, conice, de un roșu intens și lucios. Gustul este dulce, cu o ușoară aciditate și o aromă plăcută, iar spre toamna târzie devine ceva mai acrișor. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Este un soi remontant foarte…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/zmeur-pom-tarziu-de-toamna-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716395272</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur Pom Rubiniu anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-pom-rubiniu-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>ZME002873-PEP</ProductNumber>
+    <Description>Zmeur Pom Rubiniu, anul 3 – zmeură proaspătă din primul an Zmeur Pom Rubiniu este un zmeur pom scund și drept, cu port compact, ideal pentru grădini mici și spații restrânse. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt mari, conice, de un roșu-rubiniu închis. Gustul este dulce-acrișor și răcoritor, cu aromă discretă, iar în verile însorite fructele sunt mai dulci. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Este un soi remontant cu o recoltă bună pentru talia lui compactă: o…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/zmeur-pom-rubiniu-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716362504</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur Pom Gigant Bordo anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-pom-gigant-bordo-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>ZME002872-PEP</ProductNumber>
+    <Description>Zmeur Pom Gigant Bordo, anul 3 – zmeură proaspătă din primul an Zmeur Pom Gigant Bordo este un zmeur pom spectaculos, cu fructe foarte mari, care atrag privirea. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt foarte mari, alungite, de culoare roșu-bordo lucios. Gustul este dulce, cu o aciditate fină, aromă bogată de zmeură și pulpă suculentă. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Rodește în 4–5 valuri de recoltă, iar o plantă matură, bine îngrijită, dă până la aproximativ 4 kg…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/zmeur-pom-gigant-bordo-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275716002056</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur Pom Dulce de Vară anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-pom-dulce-de-vara-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>ZME002871-PEP</ProductNumber>
+    <Description>Zmeur Pom Dulce de Vară, anul 3 – zmeură proaspătă din primul an Zmeur Pom Dulce de Vară este un zmeur pom înalt și elegant, cu tulpini groase și fără spini. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt mari, conice, roșii și lucioase. Gustul este dulce, cu aromă intensă de zmeură și pulpă suculentă. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Este un soi foarte productiv: o plantă matură, bine îngrijită, dă până la aproximativ 6 kg de fructe pe sezon, pe o perioadă lungă, așa că…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/zmeur-pom-dulce-de-vara-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
+    <Identifier>59275715510536</Identifier>
+    <Manufacturer>Pepiniera României</Manufacturer>
+    <Name>Zmeur Pom Carmin anul 3</Name>
+    <Category>Casa si gradina &gt; Grădină &gt; Planta de gradina decorativa</Category>
+    <ProductUrl>https://pepinieraromaniei.ro/products/zmeur-pom-carmin-anul-3-1-bucata</ProductUrl>
+    <Price>28.00</Price>
+    <ProductNumber>ZME002870-PEP</ProductNumber>
+    <Description>Zmeur Pom Carmin, anul 3 – zmeură proaspătă din primul an Zmeur Pom Carmin este un zmeur pom compact și robust, cu tulpini groase și fără spini, care își ține singur coroana. Se poate planta în orice perioadă a anului, iar planta de 3 ani este deja formată, așa că fructifică încă din anul plantării. Fructele sunt mari, conice, de un roșu-carmin intens. Gustul este dulce, cu o ușoară aciditate, suculent și cu o aromă plăcută de zmeură. Sunt perfecte pentru consum proaspăt, deserturi și dulcețuri. Este un soi productiv: o plantă matură, bine îngrijită, dă până la aproximativ 4 kg de fructe pe…</Description>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/zmeur-pom-carmin-anul-3.webp</ImageUrl>
+    <DeliveryCost>24.90</DeliveryCost>
+  </Product>
+  <Product>
     <Identifier>59057041572104</Identifier>
     <Manufacturer>Pepiniera României</Manufacturer>
     <Name>Pachet 3 Nectarini</Name>
@@ -152,7 +440,7 @@
     <ProductUrl>https://pepinieraromaniei.ro/products/pomi-fructiferi-mar-columnar-de-vara</ProductUrl>
     <Price>64.90</Price>
     <ProductNumber>MAR00285-PEP</ProductNumber>
-    <Description>Mar Columnar de Vara la ghiveci – Fructe Proaspete în Spații Mici Marul columnar de vara la ghiveci este soluția ideală pentru cei care doresc să se bucure de mere proaspete și aromate, fără a dispune de un spațiu mare. Cu un preț avantajos, această opțiune compactă asigură fructe delicioase direct la tine acasă, fie pe balcon, terasă sau în grădini mici. Deși costurile sunt reduse comparativ cu achiziția unor pomi tradiționali, calitatea acestei plante rămâne garantată. Marul columnar crește vertical și compact, ceea ce facilitează întretinerea și optimizează spațiul avut la dispoziție.…</Description>
+    <Description>Mar Columnar de Vara la ghiveci – Fructe Proaspete în Spații Mici Marul columnar de vara la ghiveci este soluția ideală pentru cei care doresc să se bucure de mere proaspete și aromate, fără a dispune de un spațiu mare. Cu un preț avantajos, această opțiune compactă asigură fructe delicioase direct la tine acasă, fie pe balcon, terasă sau în grădini mici. Deși costurile sunt reduse comparativ cu achiziția unor pomi tradiționali, calitatea acestei plante rămâne o prioritate. Marul columnar crește vertical și compact, ceea ce facilitează întretinerea și optimizează spațiul avut la dispoziție.…</Description>
     <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Mar-Columnar-Anul-2-1-Bucata-4.jpg</ImageUrl>
     <DeliveryCost>24.90</DeliveryCost>
   </Product>
@@ -584,7 +872,7 @@
     <ProductUrl>https://pepinieraromaniei.ro/products/pomi-fructiferi-cais-umberto</ProductUrl>
     <Price>38.90</Price>
     <ProductNumber>CAI00143-PEP</ProductNumber>
-    <Description>Caisul Umberto, un pom fructifer viguros si productiv, este alegerea perfecta pentru orice gradina. Acesta oferă roade abundente, caise dulci si aromate, cu pulpa suculenta si sambure mic. Pentru o dezvoltare optima, caisul Umberto prefera locurile insorite si solul bine drenat. Udarea se face regulat, mai ales in perioadele secetoase. Pentru a favoriza inflorirea si fructificarea, se recomanda taierea regulata a ramurilor. Originar din Asia Centrala, caisul este unul dintre primii pomi fructiferi care infloreste primavara, aducand o nota de culoare si optimism in gradina. Caisele sunt bogate…</Description>
+    <Description>Caisul Umberto, un pom fructifer viguros si productiv, este alegerea potrivita pentru aproape orice gradina. Acesta oferă roade abundente, caise dulci si aromate, cu pulpa suculenta si sambure mic. Pentru o dezvoltare optima, caisul Umberto prefera locurile insorite si solul bine drenat. Udarea se face regulat, mai ales in perioadele secetoase. Pentru a favoriza inflorirea si fructificarea, se recomanda taierea regulata a ramurilor. Originar din Asia Centrala, caisul este unul dintre primii pomi fructiferi care infloreste primavara, aducand o nota de culoare si optimism in gradina. Caisele…</Description>
     <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/ChatGPTImageSep26_2026_02_17_42PM.png</ImageUrl>
     <DeliveryCost>24.90</DeliveryCost>
   </Product>
@@ -5433,7 +5721,7 @@
     <Price>32.90</Price>
     <ProductNumber>VIT001084-PEP</ProductNumber>
     <Description>Viță de Vie de Masă „Arcadia” la Ghiveci Struguri mari • Gust dulce și aromat • Productivitate bună • Adaptabilitate ridicată Vița de Vie de Masă „Arcadia” la ghiveci este un soi robust și versatil, apreciat pentru strugurii săi mari, gustoși și aspectuoși. Este o alegere foarte bună pentru grădini și terase, oferind atât un aspect decorativ plăcut, cât și o recoltă generoasă. Strugurii sunt potriviți în special pentru consumul proaspăt, dar pot fi utilizați și pentru diverse preparate sau pentru vinificare. Arcadia se remarcă printr-o bună adaptabilitate la diferite condiții de climă și sol…</Description>
-    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/ChatGPTImageSep17_2026_10_17_03AM.png</ImageUrl>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/arcadia-vita-de-vie-de-masa.jpg</ImageUrl>
     <DeliveryCost>24.90</DeliveryCost>
   </Product>
   <Product>
@@ -5733,7 +6021,7 @@
     <Price>21.90</Price>
     <ProductNumber>VIT002215-PEP</ProductNumber>
     <Description>Butaș de 3 ani Viță de Vie de Masă „Arcadia” Ciorchini mari • Gust dulce și aromat • Productivitate bună • Adaptabilitate ridicată Vița de Vie de Masă „Arcadia” la butaș este un soi robust și versatil, apreciat pentru strugurii săi mari, gustoși și aromați. Este potrivit pentru consumul proaspăt și se remarcă prin ciorchini aspectuoși, productivitate bună și adaptabilitate în mai multe regiuni viticole din România. Caracteristici Soi: Arcadia Tip: Viță-de-vie de masă Gust: Dulce și aromat Ciorchini: Mari și aspectuoși Destinație: Consum proaspăt Prezentare: Butaș Coacere: Sfârșitul lunii…</Description>
-    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/ChatGPT_Image_Sep_17_2026_10_17_03_AM.png</ImageUrl>
+    <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/arcadia-vita-de-vie-de-masa_5ac19d4c-61e4-4bc9-bc2e-cc79c4076fb6.jpg</ImageUrl>
     <DeliveryCost>24.90</DeliveryCost>
   </Product>
   <Product>
@@ -9608,7 +9896,7 @@
     <ProductUrl>https://pepinieraromaniei.ro/products/seminte-vinete-perfection</ProductUrl>
     <Price>30.90</Price>
     <ProductNumber>SEM00314-PEP</ProductNumber>
-    <Description>Seminte vinete Perfection sunt alegerea perfecta pentru orice gradinar pasionat care doreste rezultate exceptionale in gradina sa. Acest soi produce vinete ovale, cu o culoare neagra intensa, care se pastreaza chiar si la temperaturi ridicate. Plantele sunt viguroase, rezistente la boli si dau roade abundente pe tot parcursul sezonului. Pentru o dezvoltare optima, vinetele au nevoie de un sol fertil, bine drenat si de udare regulata. Hibridul Perfection este apreciat de gradinari pentru productivitatea sa ridicata si calitatea excelenta a fructelor. Vinetele au o textura ferma si o coaja…</Description>
+    <Description>Seminte vinete Perfection sunt alegerea potrivita pentru aproape orice gradinar pasionat care doreste rezultate exceptionale in gradina sa. Acest soi produce vinete ovale, cu o culoare neagra intensa, care se pastreaza chiar si la temperaturi ridicate. Plantele sunt viguroase, rezistente la boli si dau roade abundente pe tot parcursul sezonului. Pentru o dezvoltare optima, vinetele au nevoie de un sol fertil, bine drenat si de udare regulata. Hibridul Perfection este apreciat de gradinari pentru productivitatea sa ridicata si calitatea excelenta a fructelor. Vinetele au o textura ferma si o…</Description>
     <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Seminte-de-Vinete-Hibrid-Perfection-1g-3.jpg</ImageUrl>
     <DeliveryCost>24.90</DeliveryCost>
   </Product>
@@ -9632,7 +9920,7 @@
     <ProductUrl>https://pepinieraromaniei.ro/products/seminte-vinete-bonica</ProductUrl>
     <Price>30.90</Price>
     <ProductNumber>SEM00311-PEP</ProductNumber>
-    <Description>Seminte vinete Bonica sunt alegerea perfecta pentru orice gradinar pasionat. Acest hibrid valoros, timpuriu, iti ofera o recolta bogata de vinete de calitate superioara. Fructele sunt negre, ovale si lucioase, cu o pulpa alba, gustoasa si fara gust amar. Pentru o dezvoltare optima, vinetele Bonica prefera soluri fertile si bine drenate, expuse la soare. Udarea regulata si fertilizarea periodica vor contribui la obtinerea unor fructe mari si sanatoase. Plantele ating o inaltime medie si produc fructe uniforme, potrivite atat pentru gradini mici, cat si pentru culturi mai mari. Perioada de…</Description>
+    <Description>Seminte vinete Bonica sunt alegerea potrivita pentru aproape orice gradinar pasionat. Acest hibrid valoros, timpuriu, iti ofera o recolta bogata de vinete de calitate superioara. Fructele sunt negre, ovale si lucioase, cu o pulpa alba, gustoasa si fara gust amar. Pentru o dezvoltare optima, vinetele Bonica prefera soluri fertile si bine drenate, expuse la soare. Udarea regulata si fertilizarea periodica vor contribui la obtinerea unor fructe mari si sanatoase. Plantele ating o inaltime medie si produc fructe uniforme, potrivite atat pentru gradini mici, cat si pentru culturi mai mari.…</Description>
     <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Seminte-de-Vinete-Hibrid-Bonica-1g-5.jpg</ImageUrl>
     <DeliveryCost>24.90</DeliveryCost>
   </Product>
@@ -9668,7 +9956,7 @@
     <ProductUrl>https://pepinieraromaniei.ro/products/seminte-porumb-dulce-royalty-f1</ProductUrl>
     <Price>30.90</Price>
     <ProductNumber>SEM00309-PEP</ProductNumber>
-    <Description>Seminte de Porumb Dulce Hibrid "Royalty" sunt alegerea perfecta pentru orice gradinar pasionat. Acest hibrid timpuriu se remarca prin boabe dulci si suculente, ideale pentru consum in stare proaspata. Pentru o dezvoltare optima, porumbul Royalty prefera soluri fertile si bine drenate, expuse la soare. Udarea regulata este esentiala, mai ales in perioadele secetoase. Acest soi este rezistent la boli si daunatori, asigurand o recolta bogata si sanatoasa. Originar din America, porumbul dulce este o planta anuala apreciata pentru boabele sale dulci si nutritive. Hibridul Royalty a fost obtinut…</Description>
+    <Description>Seminte de Porumb Dulce Hibrid "Royalty" sunt alegerea potrivita pentru aproape orice gradinar pasionat. Acest hibrid timpuriu se remarca prin boabe dulci si suculente, ideale pentru consum in stare proaspata. Pentru o dezvoltare optima, porumbul Royalty prefera soluri fertile si bine drenate, expuse la soare. Udarea regulata este esentiala, mai ales in perioadele secetoase. Acest soi este rezistent la boli si daunatori, asigurand o recolta bogata si sanatoasa. Originar din America, porumbul dulce este o planta anuala apreciata pentru boabele sale dulci si nutritive. Hibridul Royalty a fost…</Description>
     <ImageUrl>https://cdn.shopify.com/s/files/1/1011/5543/8856/files/Seminte-de-Porumb-Dulce-Hibrid-Royalty-10g-1.jpg</ImageUrl>
     <DeliveryCost>24.90</DeliveryCost>
   </Product>
